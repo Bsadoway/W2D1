@@ -14,6 +14,6 @@ request
     console.log(reponse.headers['content-type']);
   })
   .pipe(fs.createWriteStream('./future.jpg'))
-  .on('end', function() {
+  .on('finish', function() {
     console.log("Download complete.");
   });
